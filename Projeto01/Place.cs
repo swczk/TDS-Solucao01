@@ -6,6 +6,8 @@ public class Place
 	private string _name;
 	private string _city;
 	private string _country;
+	private string _description;
+	private DateTime _dateVisited;
 
 	public int Id
 	{
@@ -44,5 +46,17 @@ public class Place
 				throw new ArgumentNullException(nameof(Country), "Country cannot be null or empty.");
 			_country = value;
 		}
+	}
+
+	public string Description
+	{
+		get { return _description; }
+		set { _description = value; }
+	}
+
+	public DateTime DateVisited
+	{
+		get { return _dateVisited; }
+		set { _dateVisited = value; }
 	}
 }

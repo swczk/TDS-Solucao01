@@ -19,22 +19,17 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-	"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
 var places = new List<Place> {
-	new Place { Id = 1, Name = "Eiffel Tower", City = "Paris", Country = "France" },
-	new Place { Id = 2, Name = "Statue of Liberty", City = "New York City", Country = "United States" },
-	new Place { Id = 3, Name = "Machu Picchu", City = "Cusco", Country = "Peru" },
-	new Place { Id = 4, Name = "Great Wall of China", City = "Beijing", Country = "China" },
-	new Place { Id = 5, Name = "Taj Mahal", City = "Agra", Country = "India" },
-	new Place { Id = 6, Name = "Pyramids of Giza", City = "Giza", Country = "Egypt" },
-	new Place { Id = 7, Name = "Colosseum", City = "Rome", Country = "Italy" },
-	new Place { Id = 8, Name = "Petra", City = "Ma'an Governorate", Country = "Jordan" },
-	new Place { Id = 9, Name = "Sydney Opera House", City = "Sydney", Country = "Australia" },
-	new Place { Id = 10, Name = "Acropolis of Athens", City = "Athens", Country = "Greece" }
+	new Place { Id = 1, Name = "Eiffel Tower", City = "Paris", Country = "France", Description = "Iconic iron tower", DateVisited = DateTime.Parse("2022-08-15") },
+	new Place { Id = 2, Name = "Statue of Liberty", City = "New York City", Country = "United States", Description = "Symbol of freedom and democracy", DateVisited = DateTime.Parse("2022-07-10") },
+	new Place { Id = 3, Name = "Machu Picchu", City = "Cusco", Country = "Peru", Description = "Ancient Inca city", DateVisited = DateTime.Parse("2022-09-05") },
+	new Place { Id = 4, Name = "Great Wall of China", City = "Beijing", Country = "China", Description = "World's longest wall", DateVisited = DateTime.Parse("2022-06-20") },
+	new Place { Id = 5, Name = "Taj Mahal", City = "Agra", Country = "India", Description = "Symbol of love", DateVisited = DateTime.Parse("2022-10-12") },
+	new Place { Id = 6, Name = "Pyramids of Giza", City = "Giza", Country = "Egypt", Description = "Ancient burial structures", DateVisited = DateTime.Parse("2022-05-03") },
+	new Place { Id = 7, Name = "Colosseum", City = "Rome", Country = "Italy", Description = "Ancient amphitheater", DateVisited = DateTime.Parse("2022-04-25") },
+	new Place { Id = 8, Name = "Petra", City = "Ma'an Governorate", Country = "Jordan", Description = "Ancient archaeological site", DateVisited = DateTime.Parse("2022-11-18") },
+	new Place { Id = 9, Name = "Sydney Opera House", City = "Sydney", Country = "Australia", Description = "Iconic performing arts center", DateVisited = DateTime.Parse("2022-12-30") },
+	new Place { Id = 10, Name = "Acropolis of Athens", City = "Athens", Country = "Greece", Description = "Ancient citadel", DateVisited = DateTime.Parse("2023-01-05") }
 };
 
 app.MapGet("/places", () =>
