@@ -1,6 +1,6 @@
-﻿namespace Projeto01;
+﻿namespace Projeto01.Model;
 
-public class Place
+public class PlaceModel
 {
 	private int _id;
 	private string _name;
@@ -9,7 +9,7 @@ public class Place
 	private string _description;
 	private DateTime _dateVisited;
 
-	public int Id
+	public int PlaceID
 	{
 		get { return _id; }
 		set { _id = value; }
